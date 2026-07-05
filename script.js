@@ -459,3 +459,5 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.classList.toggle("open-menu");
     });
 });
+
+// End of interaction logic
