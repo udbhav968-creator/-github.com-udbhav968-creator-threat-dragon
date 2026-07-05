@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepCode | Academic Activity Tracking & Student Employability Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme student-mode">
+
+    <!-- Top Torn Paper Edge Navigation Header -->
+    <header class="main-header">
+        <div class="top-red-bar">
+            <span class="ticker-text">🔥 EVOLVING EDUCATION: UNIVERSITIES & STUDENTS DUAL-MODEL ACTIVE NOW</span>
+        </div>
+        <div class="torn-edge-wrapper">
+            <!-- SVG Jagged Torn Edge -->
+            <svg class="torn-edge-svg" viewBox="0 0 1440 24" preserveAspectRatio="none">
+                <path d="M0,0 L1440,0 L1440,15 L1420,18 L1400,12 L1380,20 L1360,10 L1340,16 L1320,8 L1300,14 L1280,10 L1260,18 L1240,8 L1220,15 L1200,12 L1180,22 L1160,10 L1140,18 L1120,12 L1100,16 L1080,8 L1060,14 L1040,10 L1020,20 L1000,8 L980,16 L960,12 L940,22 L920,8 L900,15 L880,12 L860,18 L840,10 L820,14 L800,8 L780,18 L760,10 L740,16 L720,12 L700,22 L680,8 L660,14 L640,10 L620,18 L600,12 L580,20 L560,10 L540,16 L520,8 L500,14 L480,10 L460,20 L440,8 L420,16 L400,12 L380,22 L360,8 L340,15 L320,12 L300,18 L280,10 L260,14 L240,8 L220,18 L200,10 L180,16 L160,12 L140,22 L120,8 L100,14 L80,10 L60,18 L40,12 L20,20 L0,10 Z" fill="#e52b2b"/>
+            </svg>
+        </div>
+
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">Step<span>Code</span><span class="dot">.</span></a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#tech-tree-section" class="nav-link student-only">Employability Map</a>
+                <a href="#univ-dashboard-section" class="nav-link univ-only">Platform Demo</a>
+                <a href="#features" class="nav-link">Core Value</a>
+                <a href="#cta" class="nav-link">Get Started</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Mode Switcher -->
+                <div class="mode-toggle-container">
+                    <button class="mode-btn student active" id="toggle-student-mode">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        For Students
+                    </button>
+                    <button class="mode-btn university" id="toggle-univ-mode">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                        For Universities
+                    </button>
+                </div>
+                <button class="cta-btn primary-pulse open-modal-btn">Sign Up</button>
+            </div>
+
+            <button class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main>
+        
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero-section" id="about">
+            <div class="grid-backdrop"></div>
+            <div class="glow-orb hero-glow"></div>
+            
+            <div class="hero-content text-center">
+                <div class="badge-container fade-in">
+                    <span class="badge red-glow">Dual SaaS Platform</span>
+                </div>
+                
+                <!-- B2C Hero Title -->
+                <h1 class="hero-title student-only fade-in">
+                    YOU'RE WORKING HARD.<br>
+                    BUT ARE YOU LEARNING<br>
+                    <span class="highlight-red">THE RIGHT SKILLS<span class="title-underline"></span></span>?
+                </h1>
+
+                <!-- B2B Hero Title -->
+                <h1 class="hero-title univ-only fade-in">
+                    ACADEMIC ACCOUNTABILITY.<br>
+                    TRACK & EXECUTE<br>
+                    <span class="highlight-red">CONTINUOUS ASSESSMENT<span class="title-underline"></span></span>.
+                </h1>
+
+                <!-- Subtitles -->
+                <p class="hero-subtitle student-only fade-in">
+                    StepCode helps you learn what actually matters — and build what <span class="highlight-text-red">gets you hired</span>.
+                </p>
+                <p class="hero-subtitle univ-only fade-in">
+                    Convert low-engagement 2-credit subjects (Design Thinking, Life Skills, Ethics) into <span class="highlight-text-red">auditable milestone-based workflows</span>.
+                </p>
+
+                <div class="hero-buttons fade-in">
+                    <button class="cta-btn primary open-modal-btn">Get Started Now</button>
+                    <a href="#tech-tree-section" class="cta-btn secondary student-only">Explore the Map</a>
+                    <a href="#univ-dashboard-section" class="cta-btn secondary univ-only">Launch Simulated Portal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INTERACTIVE WORKSPACE SECTION ================= -->
+        
+        <!-- B2C View: Interactive Career Map (Tech Tree) -->
+        <section class="tech-tree-section student-only" id="tech-tree-section">
+            <div class="section-header text-center">
+                <span class="section-label">Interactive Path</span>
+                <h2 class="section-title">The Employability Mind-Map</h2>
+                <p class="section-desc">Click on the floating nodes surrounding the developer to preview StepCode's structured curriculum workflow.</p>
+            </div>
+
+            <div class="tech-tree-container">
+                <div class="tech-tree-visual">
+                    <!-- SVG Interactive Tech-Tree Map -->
+                    <svg class="tech-tree-svg" viewBox="0 0 800 600">
+                        <!-- Background Glows -->
+                        <defs>
+                            <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#e52b2b" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#e52b2b" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#e52b2b" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#e52b2b"/>
+                                <stop offset="100%" stop-color="#a1a1aa"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Central glow backdrop -->
+                        <circle cx="400" cy="300" r="180" fill="url(#center-glow)" />
+
+                        <!-- Connective Pathways (Dashed/Animated) -->
+                        <g class="pathways">
+                            <!-- YouTube Learning Path -->
+                            <path id="path-youtube" d="M 400 300 L 260 210" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                            <!-- React Course Path -->
+                            <path id="path-react" d="M 400 300 L 400 130" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                            <!-- GitHub Projects Path -->
+                            <path id="path-github" d="M 400 300 L 540 210" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                            <!-- Real-World Projects Path -->
+                            <path id="path-realworld" d="M 400 300 L 560 380" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                            <!-- Build Skills Path -->
+                            <path id="path-build" d="M 400 300 L 400 460" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                            <!-- DSA Practice Path -->
+                            <path id="path-dsa" d="M 400 300 L 240 380" class="flow-line" stroke="url(#line-gradient)" stroke-width="2" stroke-dasharray="8,6" />
+                        </g>
+
+                        <!-- Nodes (Interactive Elements) -->
+                        <!-- YouTube Node -->
+                        <g class="tree-node" data-node="youtube" transform="translate(260, 210)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <rect x="-40" y="-18" width="24" height="24" class="node-icon-bg" rx="4" transform="translate(28, 6)" fill="#1f1f23"/>
+                            <!-- Play Icon -->
+                            <path d="M -8 -6 L 2 0 L -8 6 Z" fill="#e52b2b" transform="translate(40, 18)" />
+                            <text class="node-label" y="48" text-anchor="middle">YouTube Learning</text>
+                        </g>
+
+                        <!-- React Course Node -->
+                        <g class="tree-node" data-node="react" transform="translate(400, 130)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <!-- React-like ellipse icon -->
+                            <g stroke="#e52b2b" stroke-width="1.5" fill="none" transform="scale(0.8)">
+                                <ellipse rx="15" ry="6" />
+                                <ellipse rx="15" ry="6" transform="rotate(60)" />
+                                <ellipse rx="15" ry="6" transform="rotate(120)" />
+                                <circle r="2" fill="#e52b2b" />
+                            </g>
+                            <text class="node-label" y="48" text-anchor="middle">React Course</text>
+                        </g>
+
+                        <!-- GitHub Projects Node -->
+                        <g class="tree-node" data-node="github" transform="translate(540, 210)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <!-- GitHub Silhouette Icon -->
+                            <path d="M-10,0 C-10,5.5 1.5,10 5,10 C8.5,10 10,7.5 10,5 C10,1 -2,0.5 -10,0 Z" fill="#e52b2b" transform="translate(0, 0) scale(1.3)"/>
+                            <circle cx="0" cy="-4" r="5" fill="#e52b2b"/>
+                            <text class="node-label" y="48" text-anchor="middle">GitHub Projects</text>
+                        </g>
+
+                        <!-- Real-World Projects Node -->
+                        <g class="tree-node" data-node="realworld" transform="translate(560, 380)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <!-- Document list icon -->
+                            <path d="M -8 -10 L 4 -10 L 10 -4 L 10 10 L -8 10 Z" fill="none" stroke="#e52b2b" stroke-width="2"/>
+                            <path d="M -4 -4 L 4 -4 M -4 1 L 6 1 M -4 6 L 2 6" stroke="#e52b2b" stroke-width="1.5"/>
+                            <text class="node-label" y="48" text-anchor="middle">Real-World Projects</text>
+                        </g>
+
+                        <!-- Build Skills Node -->
+                        <g class="tree-node" data-node="build" transform="translate(400, 460)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <!-- Code Icon </> -->
+                            <path d="M -10 -6 L -16 0 L -10 6 M 10 -6 L 16 0 L 10 6 M -3 8 L 3 -8" fill="none" stroke="#e52b2b" stroke-width="2"/>
+                            <text class="node-label" y="48" text-anchor="middle">Build Skills</text>
+                        </g>
+
+                        <!-- DSA Practice Node -->
+                        <g class="tree-node" data-node="dsa" transform="translate(240, 380)">
+                            <circle r="30" class="node-bg" />
+                            <circle r="40" class="node-pulse" />
+                            <!-- Graduation Cap Icon -->
+                            <path d="M 0 -10 L 14 -4 L 0 2 L -14 -4 Z" fill="#e52b2b" />
+                            <path d="M -10 -1 V 4 C -10 8 0 10 0 10 C 0 10 10 8 10 4 V -1" fill="none" stroke="#e52b2b" stroke-width="1.5"/>
+                            <path d="M 12 -2 V 6 L 14 7 L 16 6 V -2 Z" fill="#a1a1aa"/>
+                            <text class="node-label" y="48" text-anchor="middle">DSA Practice</text>
+                        </g>
+
+                        <!-- Central Coder Character SVG -->
+                        <g class="center-coder" transform="translate(400, 300)">
+                            <!-- Glowing outer shell -->
+                            <circle r="42" fill="#09090b" stroke="#e52b2b" stroke-width="2.5" stroke-dasharray="100,8" />
+                            <circle r="35" fill="#18181c" />
+                            
+                            <!-- Simple outline of programmer from back (looking up) -->
+                            <path d="M -12 22 C -12 10 -6 6 0 6 C 6 6 12 10 12 22 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+                            <!-- Head -->
+                            <circle cx="0" cy="-4" r="7" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <!-- Backpack straps outlines -->
+                            <path d="M -7 11 C -7 18 -10 18 -10 18 M 7 11 C 7 18 10 18 10 18" fill="none" stroke="#e52b2b" stroke-width="1.5" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Detail Panel (Spotlight) -->
+                <div class="tech-tree-details" id="spotlight-panel">
+                    <div class="spotlight-content" id="spotlight-content">
+                        <div class="spotlight-badge" id="spotlight-step">Step 1: Core Foundation</div>
+                        <h3 class="spotlight-title" id="spotlight-title">YouTube Structured Learning</h3>
+                        <p class="spotlight-desc" id="spotlight-desc">Tired of tutorial hell? StepCode filters high-quality academic and industry lectures from YouTube and structures them into linear learning pathways complete with checkpoint quizzes.</p>
+                        
+                        <div class="spotlight-bullets-title">What StepCode does for you:</div>
+                        <ul class="spotlight-bullets" id="spotlight-list">
+                            <li>Curates chaotic YouTube playlists into structured sequences</li>
+                            <li>Injects assessment checkpoints to prove video retention</li>
+                            <li>Allows faculty to audit external video resource consumption</li>
+                        </ul>
+
+                        <div class="spotlight-progress-container">
+                            <div class="progress-info">
+                                <span>Concept Mastery</span>
+                                <span id="progress-val">85%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" id="spotlight-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- B2B View: University Assessment Portal Demo -->
+        <section class="univ-dashboard-section univ-only" id="univ-dashboard-section">
+            <div class="section-header text-center">
+                <span class="section-label">SaaS Preview</span>
+                <h2 class="section-title">Academic Activity Control Panel</h2>
+                <p class="section-desc">Explore how department heads, professors, and mentors track continuous assessment courses in real time.</p>
+            </div>
+
+            <!-- Simulated SaaS Interface -->
+            <div class="saas-mockup-wrapper fade-in">
+                <!-- Top Header -->
+                <div class="saas-header">
+                    <div class="saas-brand">
+                        <span class="status-indicator active"></span>
+                        <strong>StepCode Institutional Portal</strong>
+                        <span class="dept-badge">CSET Dept.</span>
+                    </div>
+                    <div class="saas-filters">
+                        <select class="saas-select">
+                            <option>Subject: Design Thinking (2 Credits)</option>
+                            <option>Subject: Entrepreneurship & Innovation</option>
+                            <option>Subject: Professional Ethics</option>
+                        </select>
+                        <select class="saas-select">
+                            <option>Batch: B.Tech CSE (Year 2)</option>
+                            <option>Batch: B.Tech AI/ML (Year 2)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="saas-dashboard-grid">
+                    <!-- Metric Cards -->
+                    <div class="saas-metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-title">Active Enrolled Students</div>
+                            <div class="metric-value">342</div>
+                            <div class="metric-trend green">+12% consistency this week</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Milestone Completion Rate</div>
+                            <div class="metric-value">91.4%</div>
+                            <div class="metric-trend green">890/920 deliverables verified</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Mentor Interaction Frequency</div>
+                            <div class="metric-value">4.2h / week</div>
+                            <div class="metric-trend yellow">Required target: 5.0h</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">Plagiarism Alerts Checked</div>
+                            <div class="metric-value">2</div>
+                            <div class="metric-trend green">Clean audits: 99.4%</div>
+                        </div>
+                    </div>
+
+                    <!-- Left: Course Milestones Tracker -->
+                    <div class="saas-card milestone-tracker">
+                        <h3 class="saas-card-title">Curriculum Activity Map (12-Week Milestones)</h3>
+                        <div class="milestone-list">
+                            <div class="milestone-item completed">
+                                <div class="m-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                <div class="m-details">
+                                    <div class="m-title">Milestone 1: Problem Definition & Research</div>
+                                    <div class="m-meta">Week 1-2 | Submission: PDF Pitch Deck | 100% evaluated</div>
+                                </div>
+                            </div>
+                            <div class="milestone-item completed">
+                                <div class="m-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                                <div class="m-details">
+                                    <div class="m-title">Milestone 2: User Persona & Mapping</div>
+                                    <div class="m-meta">Week 3-4 | Submission: Figma Board Link | 98% evaluated</div>
+                                </div>
+                            </div>
+                            <div class="milestone-item active-pulse">
+                                <div class="m-status"><span>3</span></div>
+                                <div class="m-details">
+                                    <div class="m-title">Milestone 3: Rapid Low-Fidelity Prototyping</div>
+                                    <div class="m-meta">Week 5-6 | Submission: GitHub / Video Demo | 64% submitted</div>
+                                </div>
+                                <button class="saas-btn-sm" onclick="alert('Sending notification to 68 pending students...')">Remind Pending (68)</button>
+                            </div>
+                            <div class="milestone-item pending">
+                                <div class="m-status"><span>4</span></div>
+                                <div class="m-details">
+                                    <div class="m-title">Milestone 4: User Validation & Refinement</div>
+                                    <div class="m-meta">Week 7-8 | Submission: Google Forms Audit | Pending</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live Activity Log -->
+                    <div class="saas-card activity-log">
+                        <h3 class="saas-card-title">Live Student Submission Activity Log</h3>
+                        <div class="log-list" id="activity-log-list">
+                            <!-- JS will inject dynamic logs here -->
+                            <div class="log-item">
+                                <span class="time-stamp">Just now</span>
+                                <span class="log-desc"><strong>Udbhav Yadav</strong> (B.Tech AI/ML) submitted <em>Milestone 3: Video Demo</em></span>
+                                <span class="log-tag tag-success">Milestone 3</span>
+                            </div>
+                            <div class="log-item">
+                                <span class="time-stamp">3 mins ago</span>
+                                <span class="log-desc"><strong>Dr. A. Sharma</strong> approved <em>Milestone 2 grades</em> for Batch B1</span>
+                                <span class="log-tag tag-info">Faculty Grade</span>
+                            </div>
+                            <div class="log-item">
+                                <span class="time-stamp">12 mins ago</span>
+                                <span class="log-desc"><strong>Shreya Gupta</strong> integrated GitHub repo: <code>dt-innovation-app</code></span>
+                                <span class="log-tag tag-github">GitHub Auth</span>
+                            </div>
+                            <div class="log-item">
+                                <span class="time-stamp">42 mins ago</span>
+                                <span class="log-desc"><strong>System audit</strong> flagged <em>plagiarism check</em> on Batch B4 (Passed)</span>
+                                <span class="log-tag tag-warning">Audit Log</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= FEATURES VALUE PROPOSITION ================= -->
+        <section class="features-section" id="features">
+            <div class="section-header text-center">
+                <span class="section-label">Core Capabilities</span>
+                <!-- B2C Heading -->
+                <h2 class="section-title student-only">WITH STEPCODE, YOU:</h2>
+                <!-- B2B Heading -->
+                <h2 class="section-title univ-only">WITH STEPCODE, INSTITUTIONS:</h2>
+                <p class="section-desc">A structured digital workflow designed to align curriculum objectives with actual output execution.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Card 1: FOCUS -->
+                <div class="feature-card interactive-tilt">
+                    <div class="feature-icon-wrapper">
+                        <!-- Target/Focus Icon SVG -->
+                        <svg class="feature-icon red-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">FOCUS</h3>
+                    <p class="feature-text student-only">On the right skills, not just more topics. Cut out video tutorial bloat and target active workspace execution.</p>
+                    <p class="feature-text univ-only">On verified student outcomes, not syllabus checklists. Audit whether students are acquiring industrial competencies.</p>
+                </div>
+
+                <!-- Card 2: BUILD -->
+                <div class="feature-card interactive-tilt">
+                    <div class="feature-icon-wrapper">
+                        <!-- Code Icon SVG -->
+                        <svg class="feature-icon red-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">BUILD</h3>
+                    <p class="feature-text student-only">Real-world projects that showcase your ability. Connect GitHub to track concrete commits and deliverables.</p>
+                    <p class="feature-text univ-only">Hands-on milestone trackers. Track BTech project repositories, innovation models, and coding checkpoints.</p>
+                </div>
+
+                <!-- Card 3: PRACTICE -->
+                <div class="feature-card interactive-tilt">
+                    <div class="feature-icon-wrapper">
+                        <!-- Toolbox/Briefcase Icon SVG -->
+                        <svg class="feature-icon red-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">PRACTICE</h3>
+                    <p class="feature-text student-only">With structured DSA & problem-solving trackers. Solidify mathematical foundations and logical consistency.</p>
+                    <p class="feature-text univ-only">With scalable batch-wise mentoring dashboard. Check how frequently mentors review student assignments.</p>
+                </div>
+
+                <!-- Card 4: GET HIRED -->
+                <div class="feature-card interactive-tilt">
+                    <div class="feature-icon-wrapper">
+                        <!-- Rocket/Hired Icon SVG -->
+                        <svg class="feature-icon red-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">GET HIRED</h3>
+                    <p class="feature-text student-only">With confidence and placement preparation. Produce a cryptographic learning passport that recruiters trust.</p>
+                    <p class="feature-text univ-only">Improve college placement conversion stats by maintaining verified, transparent portfolios for recruitment partners.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CALL TO ACTION SECTION ================= -->
+        <section class="cta-section" id="cta">
+            <div class="grid-backdrop"></div>
+            <div class="glow-orb cta-glow"></div>
+            
+            <div class="cta-container text-center">
+                <div class="rocket-container" id="rocket-anim">
+                    <!-- SVG Rocket with fire -->
+                    <svg class="rocket-svg" viewBox="0 0 64 64">
+                        <g class="rocket-body">
+                            <!-- Rocket body -->
+                            <path d="M32,4 C32,4 42,16 42,32 C42,42 38,46 32,46 C26,46 22,42 22,32 C22,16 32,4 32,4 Z" fill="#fafafa"/>
+                            <!-- Red nose cone -->
+                            <path d="M32,4 C32,4 37,12 37,18 C32,18 27,18 27,18 C27,12 32,4 32,4 Z" fill="#e52b2b"/>
+                            <!-- Circular window -->
+                            <circle cx="32" cy="26" r="4" fill="#1f1f23" stroke="#e52b2b" stroke-width="1.5"/>
+                            <!-- Wings -->
+                            <path d="M22,32 C22,32 12,36 12,44 C18,44 22,40 22,36" fill="#e52b2b"/>
+                            <path d="M42,32 C42,32 52,36 52,44 C46,44 42,40 42,36" fill="#e52b2b"/>
+                        </g>
+                        <!-- Jet exhaust fire -->
+                        <g class="fire-group">
+                            <path d="M32,46 C35,52 32,60 32,60 C32,60 29,52 32,46 Z" fill="#ff7a00" class="fire-inner"/>
+                            <path d="M32,46 C37,50 32,56 32,56 C32,56 27,50 32,46 Z" fill="#ff0000" class="fire-outer"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <h2 class="cta-title">START TODAY.<br><span class="highlight-red">GET HIRED TOMORROW.</span></h2>
+                <div class="cta-sub">
+                    <span>Learn.</span>
+                    <span class="sep">&bull;</span>
+                    <span>Build.</span>
+                    <span class="sep">&bull;</span>
+                    <span>Grow.</span>
+                    <span class="sep">&bull;</span>
+                    <span class="highlight-text-red">Get Hired.</span>
+                </div>
+                
+                <button class="cta-btn primary-pulse large open-modal-btn">Launch StepCode Dashboard</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Step<span>Code</span></h3>
+                <p>The academic execution layer bridging institutional curriculum with real-world employability metrics.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <a href="#about">About Platform</a>
+                <a href="#tech-tree-section">Student Roadmaps</a>
+                <a href="#univ-dashboard-section">University Portals</a>
+            </div>
+            <div class="footer-links">
+                <h4>Academic Courses</h4>
+                <span>Design Thinking</span>
+                <span>DSA Trackers</span>
+                <span>Innovation & Entrepreneurship</span>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 StepCode SaaS Inc. All rights reserved. University Activity Tracking Ecosystem.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MULTI-STEP ONBOARDING MODAL ================= -->
+    <div class="modal-backdrop" id="onboarding-modal">
+        <div class="modal-container">
+            <!-- Close Button -->
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            
+            <!-- Progress Bar -->
+            <div class="modal-progress-bar">
+                <div class="modal-progress-fill" id="modal-progress" style="width: 33%;"></div>
+            </div>
+
+            <!-- STEP 1: Audience Selector -->
+            <div class="modal-step active" data-step="1">
+                <h3 class="modal-heading">How would you like to use StepCode?</h3>
+                <p class="modal-subheading">Choose your account type to customize your workspace experience.</p>
+                
+                <div class="option-cards-grid">
+                    <div class="option-card" id="option-student">
+                        <div class="option-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h4>I am a Student</h4>
+                        <p>I want to structure my self-learning, track git commits, and compile an ATS-ready portfolio.</p>
+                    </div>
+                    <div class="option-card" id="option-educator">
+                        <div class="option-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                        <h4>I am an Educator / Institution</h4>
+                        <p>I want to monitor department batches, audit student activity, and grade continuous assessment milestone submissions.</p>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="cta-btn secondary disabled" id="step1-next" disabled>Continue</button>
+                </div>
+            </div>
+
+            <!-- STEP 2A: Student Pathway Config -->
+            <div class="modal-step" data-step="2a">
+                <h3 class="modal-heading">What is your primary career track?</h3>
+                <p class="modal-subheading">We will pre-load your Tech-Tree roadmap with matching node topics.</p>
+                
+                <div class="input-selections-grid">
+                    <button class="selector-btn" data-track="frontend">Frontend Web Developer (React, Next.js)</button>
+                    <button class="selector-btn" data-track="backend">Backend Engineer (Node, Python, SQL)</button>
+                    <button class="selector-btn" data-track="aiml">AI / Machine Learning Engineer</button>
+                    <button class="selector-btn" data-track="dsa">DSA Specialist (Competitive Programming)</button>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="cta-btn secondary" id="step2a-back">Back</button>
+                    <button class="cta-btn primary disabled" id="step2a-next" disabled>Create Roadmap</button>
+                </div>
+            </div>
+
+            <!-- STEP 2B: University Config -->
+            <div class="modal-step" data-step="2b">
+                <h3 class="modal-heading">Tell us about your Institution</h3>
+                <p class="modal-subheading">Our onboarding engine will pre-configure milestone structures for your Continuous Assessment courses.</p>
+                
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="inst-name">University / Organization Name</label>
+                        <input type="text" id="inst-name" placeholder="e.g., NIT Delhi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inst-subject">Focus Course Category</label>
+                        <select id="inst-subject">
+                            <option value="dt">Design Thinking (2 Credits)</option>
+                            <option value="ie">Innovation & Entrepreneurship</option>
+                            <option value="lse">Life Skills / Professional Communication</option>
+                            <option value="multiple">Multiple Interdisciplinary Subjects</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="cta-btn secondary" id="step2b-back">Back</button>
+                    <button class="cta-btn primary" id="step2b-next">Request Sandbox Access</button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Setup Success & Loading -->
+            <div class="modal-step text-center" data-step="3">
+                <div class="success-icon-wrapper">
+                    <!-- Spinning loading circle changing to checkmark -->
+                    <div class="spinner" id="success-spinner"></div>
+                    <div class="success-checkmark" id="success-check" style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+                
+                <h3 class="modal-heading" id="success-title">Compiling Workspace Config...</h3>
+                <p class="modal-subheading" id="success-text">StepCode is setting up your milestones and auth tokens. Please hold.</p>
+
+                <div class="modal-actions" id="success-actions" style="opacity: 0; pointer-events: none;">
+                    <button class="cta-btn primary large" id="success-finish-btn">Enter Workspace</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
