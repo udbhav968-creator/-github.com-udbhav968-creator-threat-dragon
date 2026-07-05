@@ -53,3 +53,7 @@ This project is licensed under the MIT License.
 
 
 <!-- Final Review Completed -->
+
+## Community
+
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing Guidelines](CONTRIBUTING.md).
